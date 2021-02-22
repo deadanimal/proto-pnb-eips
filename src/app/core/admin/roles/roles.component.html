@@ -1,0 +1,427 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0"> Roles </h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-file-invoice text-dark"> </i> </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)" class="text-dark"> Management </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                Roles
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="col-lg-6 col-5 text-right">
+					<a class="btn btn-sm btn-default text-white" (click)="openModal(createRoles)">
+						Add New Roles
+					</a>
+				</div>
+            </div>
+
+            <div class=" row">
+                <div class=" col-xl-3 col-md-6">
+                  <div class=" card card-stats">
+                    <div class=" card-body">
+                      <div class=" row">
+                        <div class=" col">
+                          <h5 class=" card-title text-uppercase text-muted mb-0">
+                            Total traffic
+                          </h5>
+        
+                          <span class=" h2 font-weight-bold mb-0"> 350,897 </span>
+                        </div>
+        
+                        <div class=" col-auto">
+                          <div
+                            class=" icon icon-shape bg-gradient-red text-white rounded-circle shadow"
+                          >
+                            <i class=" ni ni-active-40"> </i>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <p class=" mt-3 mb-0 text-sm">
+                        <span class=" text-success mr-2">
+                          <i class=" fa fa-arrow-up"> </i> 3.48%
+                        </span>
+        
+                        <span class=" text-nowrap"> Since last month </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class=" col-xl-3 col-md-6">
+                  <div class=" card card-stats">
+                    <div class=" card-body">
+                      <div class=" row">
+                        <div class=" col">
+                          <h5 class=" card-title text-uppercase text-muted mb-0">
+                            Total Roles
+                          </h5>
+        
+                          <span class=" h2 font-weight-bold mb-0"> 2,356 </span>
+                        </div>
+        
+                        <div class=" col-auto">
+                          <div
+                            class=" icon icon-shape bg-gradient-orange text-white rounded-circle shadow"
+                          >
+                            <i class=" ni ni-chart-pie-35"> </i>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <p class=" mt-3 mb-0 text-sm">
+                        <span class=" text-success mr-2">
+                          <i class=" fa fa-arrow-up"> </i> 3.48%
+                        </span>
+        
+                        <span class=" text-nowrap"> Since last month </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class=" col-xl-3 col-md-6">
+                  <div class=" card card-stats">
+                    <div class=" card-body">
+                      <div class=" row">
+                        <div class=" col">
+                          <h5 class=" card-title text-uppercase text-muted mb-0">
+                            Sales
+                          </h5>
+        
+                          <span class=" h2 font-weight-bold mb-0"> 924 </span>
+                        </div>
+        
+                        <div class=" col-auto">
+                          <div
+                            class=" icon icon-shape bg-gradient-green text-white rounded-circle shadow"
+                          >
+                            <i class=" ni ni-money-coins"> </i>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <p class=" mt-3 mb-0 text-sm">
+                        <span class=" text-success mr-2">
+                          <i class=" fa fa-arrow-up"> </i> 3.48%
+                        </span>
+        
+                        <span class=" text-nowrap"> Since last month </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class=" col-xl-3 col-md-6">
+                  <div class=" card card-stats">
+                    <div class=" card-body">
+                      <div class=" row">
+                        <div class=" col">
+                          <h5 class=" card-title text-uppercase text-muted mb-0">
+                            Performance
+                          </h5>
+        
+                          <span class=" h2 font-weight-bold mb-0"> 49,65% </span>
+                        </div>
+        
+                        <div class=" col-auto">
+                          <div
+                            class=" icon icon-shape bg-gradient-info text-white rounded-circle shadow"
+                          >
+                            <i class=" ni ni-chart-bar-32"> </i>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <p class=" mt-3 mb-0 text-sm">
+                        <span class=" text-success mr-2">
+                          <i class=" fa fa-arrow-up"> </i> 3.48%
+                        </span>
+        
+                        <span class=" text-nowrap"> Since last month </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h3 class="m-0"> List of User Roles </h3>
+                </div>
+                <div class="card-body">
+                    <div class="dataTables_wrapper py-4">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-6">
+                            <div class="dataTables_length" id="datatable_length">
+                              <label>
+                                Show
+                                <select
+                                  name="datatable_length"
+                                  aria-controls="datatable"
+                                  class="form-control form-control-sm"
+                                  (change)="entriesChange($event)"
+                                >
+                                  <option value="5" [selected]="entries==5">5</option>
+                                  <option value="10" [selected]="entries==10">10</option>
+                                  <option value="15" [selected]="entries==15">15</option>
+                                  <option value="-1" [selected]="entries==-1">All</option>
+                                </select>
+                                entries
+                                </label>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            <div id="datatable_filter" class="dataTables_filter">
+                              <label>
+                                <input
+                                  type="search"
+                                  class="form-control form-control-sm"
+                                  placeholder="Search records"
+                                  aria-controls="datatable"
+                                  (keyup)="filterTable($event)"
+                                />
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <ngx-datatable
+                          class="bootstrap selection-cell"
+                          [columnMode]="'force'"
+                          [headerHeight]="50"
+                          [footerHeight]="50"
+                          [rowHeight]="'auto'"
+                          [limit]="entries != -1 ? entries:undefined"
+                          [rows]="temp"
+                          
+                        >
+                    
+                            <ngx-datatable-column name="No">
+                                <ng-template
+                                let-rowIndex="rowIndex"
+                                let-row="row"
+                                ngx-datatable-cell-template
+                                >
+                                <strong>{{ rowIndex + 1 }}</strong>
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Name" >
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                {{row.typeUser}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Roles Access" >
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <span
+                                      *ngIf="row.status == 'admin'"
+                                      class="badge badge-pill badge-success"
+                                      >Add data</span
+                                    >
+                                    <span
+                                      *ngIf="row.status == 'admin'"
+                                      class="badge badge-pill badge-success"
+                                      >Update Data</span
+                                    >
+                                    <span
+                                      *ngIf="row.status == 'admin'"
+                                      class="badge badge-pill badge-success"
+                                      >Upload File</span
+                                    >
+                                    <span
+                                      *ngIf="row.status == 'admin'"
+                                      class="badge badge-pill badge-success"
+                                      >Export Data</span
+                                    >
+                                    <span
+                                      *ngIf="row.status == 'admin'"
+                                      class="badge badge-pill badge-danger"
+                                      >Portal</span
+                                    >
+                                    <span
+                                      *ngIf="row.status == 'user'"
+                                      class="badge badge-pill badge-success"
+                                      >Add data</span
+                                    >
+                                    <span
+                                      *ngIf="row.status == 'user'"
+                                      class="badge badge-pill badge-danger"
+                                      >Update Data</span
+                                    >
+                                    <span
+                                      *ngIf="row.status == 'user'"
+                                      class="badge badge-pill badge-danger"
+                                      >Upload File</span
+                                    >
+                                    <span
+                                      *ngIf="row.status == 'user'"
+                                      class="badge badge-pill badge-danger"
+                                      >Export Data</span
+                                    >
+                                    <span
+                                      *ngIf="row.status == 'user'"
+                                      class="badge badge-pill badge-success"
+                                      >Portal</span
+                                    >
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Created" >
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                {{row.activityTime}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Action">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <!-- <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Action" (click)="openModal(viewAction)">
+                                        <span class=" btn-inner--icon"> <i class=" fas fa-file-pdf"> </i> </span>
+                                    </button>
+                                    <button class=" btn btn-icon btn-default btn-sm" type="button" title="Generate Invoice" (click)="lgModal(generateInvoice)">
+                                        <span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+                                    </button> -->
+                                    <button class=" btn btn-icon btn-default btn-sm" type="button" title="Edit" (click)="openModal(edit)">
+                                        <span class=" btn-inner--icon"> <i class=" fas fa-edit"> </i> </span>
+                                    </button>
+                                </ng-template>
+                            </ngx-datatable-column>
+                        </ngx-datatable>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #createRoles>
+    <div class=" modal-header bg-default ">
+        <h6 class=" modal-title text-white" id="modal-title-default">
+            Add Roles
+        </h6>
+  
+        <button
+          aria-label="Close"
+          class=" close"
+          data-dismiss="modal"
+          type="button"
+          (click)="modalRef.hide()"
+        >
+          <span aria-hidden="true"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="form-control-label"> Name </label>
+                    <input
+                        class=" form-control"
+                        id="example-text-input"
+                        type="text"
+                        placeholder="Type here..."
+                    />   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button 
+            class=" btn btn-default text-white" 
+            type="button" 
+            class="btn btn-success"
+            (click)="successSwal('saved')"
+        >
+            Save
+	    </button>
+        <button
+            class=" btn btn-link btn-danger ml-auto text-white"
+            data-dismiss="modal"
+            type="button"
+            (click)="modalRef.hide()"
+        >
+            Close
+        </button>
+	</div>
+</ng-template>
+
+<ng-template #edit>
+    <div class=" modal-header bg-default ">
+        <h6 class=" modal-title text-white" id="modal-title-default">
+            Add Roles
+        </h6>
+  
+        <button
+          aria-label="Close"
+          class=" close"
+          data-dismiss="modal"
+          type="button"
+          (click)="modalRef.hide()"
+        >
+          <span aria-hidden="true"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="form-control-label"> Name </label>
+                    <input
+                        class=" form-control"
+                        id="example-text-input"
+                        type="text"
+                        placeholder="Type here..."
+                    />   
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="form-control-label"> Roles Description </label>
+                    <input
+                        class=" form-control"
+                        id="example-text-input"
+                        type="text"
+                        placeholder="Type here..."
+                    />   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button 
+            class=" btn btn-default text-white" 
+            type="button" 
+            class="btn btn-success"
+            (click)="successSwal('saved')"
+        >
+            Save
+	    </button>
+        <button
+            class=" btn btn-link btn-danger ml-auto text-white"
+            data-dismiss="modal"
+            type="button"
+            (click)="modalRef.hide()"
+        >
+            Close
+        </button>
+	</div>
+</ng-template>

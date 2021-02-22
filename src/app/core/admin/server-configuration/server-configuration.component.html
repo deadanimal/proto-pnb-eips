@@ -1,0 +1,391 @@
+<div class="header pb-6">
+	<div class="container-fluid">
+		<div class="header-body">
+			<div class="row align-items-center py-4">
+				<div class="col-lg-6 col-7">
+					<h6 class="h2 text-dark d-inline-block mb-0"> Server Configuration </h6>
+
+					<nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+							<li class=" breadcrumb-item">
+								<a href="javascript:void(0)"> <i class="fas fa-server text-dark"> </i> </a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+
+				<!-- <div class="col-lg-6 col-5 text-right">
+					<a class="btn btn-sm btn-neutral" href="javascript:void(0)"> New </a>
+
+					<a class="btn btn-sm btn-neutral" href="javascript:void(0)">
+						Filters
+					</a>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mt--6">
+	<div class="row">
+		<div class="col-xl-8">
+			<div class="card">
+				<div class="card-header">
+					<h5 class="h3 mb-0"> Nodes Health </h5>
+				</div>
+				<div class="card-body">
+					<h5 class="m-0"> Nodes: 192.168.1.13 </h5>
+					<!-- <div class="mb-2">
+						<progressbar max="100" [value]="60" type="yellow" [striped]="true" [animate]="true" style="height: 35px;"><h4>RM 567</h4></progressbar>
+					</div> -->
+					<div class="row">
+						<div class="col-md-9">
+							<div class="mt-2 ">
+								<progressbar class="bg-warning" max="100" [value]="60" type="yellow" [striped]="true" [animate]="true" style="height: 35px;"></progressbar>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<h2 class="h1 mb-0 text-success mt-0"> RM5,734 </h2>
+
+							<span class=" text-nowrap"> Total Outstanding </span>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="chart">
+								<div class="amchart" id="chartservermanage1"></div>
+							</div>
+							<h4 class="textbar">
+								CPU
+							</h4>
+							<h4 class="textbar">
+								2% / 1 CPU
+							</h4>
+						</div>
+						<div class="col-md-4">
+							<div class="chart">
+								<div class="amchart" id="chartservermanage2"></div>
+							</div>
+							<h4 class="textbar">
+								Memory
+							</h4>
+							<h4 class="textbar">
+								700.14 MB / 2.4 GB
+							</h4>
+						</div>
+						<div class="col-md-4">
+							<div class="chart">
+								<div class="amchart" id="chartservermanage3"></div>
+							</div>
+							<h4 class="textbar">
+								File System 1
+							</h4>
+							<h4 class="textbar">
+								2.63 GB / 6.8 GB
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-4">
+			<div class=" card">
+				<div class=" card-header"><h5 class=" h3 mb-0"> Target Department Peformance </h5></div>
+		
+				<div class=" card-body">
+				  <ul class=" list-group list-group-flush list my--3">
+					<li class=" list-group-item px-0">
+					  <div class=" row align-items-center">
+						<div class=" col-auto">
+						  <a class=" avatar rounded-circle" href="javascript:void(0)">
+							<img
+							  alt="Image placeholder"
+							  src="assets/img/theme/bootstrap.jpg"
+							/>
+						  </a>
+						</div>
+		
+						<div class=" col">
+						  <h5> Total Projects </h5>
+		
+						  <div class="progress-xs mb-0">
+							<progressbar type="warning" [value]="60"> </progressbar>
+						  </div>
+						</div>
+					  </div>
+					</li>
+		
+					<li class=" list-group-item px-0">
+					  <div class=" row align-items-center">
+						<div class=" col-auto">
+						  <a class=" avatar rounded-circle" href="javascript:void(0)">
+							<img
+							  alt="Image placeholder"
+							  src="assets/img/theme/angular.jpg"
+							/>
+						  </a>
+						</div>
+		
+						<div class=" col">
+						  <h5> Total Cluster </h5>
+		
+						  <div class="progress-xs mb-0">
+							<progressbar type="success" [value]="100"> </progressbar>
+						  </div>
+						</div>
+					  </div>
+					</li>
+		
+					<li class=" list-group-item px-0">
+					  <div class=" row align-items-center">
+						<div class=" col-auto">
+						  <a class=" avatar rounded-circle" href="javascript:void(0)">
+							<img
+							  alt="Image placeholder"
+							  src="assets/img/theme/sketch.jpg"
+							/>
+						  </a>
+						</div>
+		
+						<div class=" col">
+						  <h5> Total Instances </h5>
+		
+						  <div class="progress-xs mb-0">
+							<progressbar type="danger" [value]="72"> </progressbar>
+						  </div>
+						</div>
+					  </div>
+					</li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-12">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <h6 class="h2 text-dark d-inline-block mb-0"> Find Server </h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class=" col-xl-3">
+                            <div class=" form-group">
+                                <label class=" form-control-label" for="example4cols2Input">
+                                    Log Level
+                                </label>
+                    
+                                <select class="form-control custom-select">
+									<option hidden selected>Please pick</option>
+									<option> All </option>
+									<option> Level 1 </option>
+									<option> Level 2 </option>
+								</select>
+                            </div>
+                        </div>
+                        <div class=" col-xl-3">
+                            <div class=" form-group">
+                                <label class=" form-control-label" for="example4cols2Input">
+                                    Cluster
+                                </label>
+                    
+                                <select class="form-control custom-select">
+									<option hidden selected>Please pick</option>
+									<option> Demo Cluster </option>
+									<option> Cluster 1 </option>
+									<option> Cluster 2 </option>
+								</select>
+                            </div>
+                        </div>
+                        <div class=" col-xl-3">
+                            <div class=" form-group">
+                                <label class=" form-control-label" for="example4cols2Input">
+                                    Project
+                                </label>
+
+                                <select class="form-control custom-select">
+									<option hidden selected>Please pick</option>
+									<option> All </option>
+									<option> Level 1 </option>
+									<option> Level 2 </option>
+								</select>
+                            </div>
+                        </div>
+                        <div class=" col-xl-3">
+                            <div class=" form-group">
+                                <label class=" form-control-label" for="example4cols2Input">
+                                  Live Pod
+                                </label>
+                    
+                                <select class="form-control custom-select">
+									<option hidden selected>Please pick</option>
+									<option> Off </option>
+									<option> On </option>
+								</select>
+                            </div>
+                        </div>
+						<div class=" col-xl-4">
+                            <div class=" form-group">
+                                <label class=" form-control-label" for="example4cols2Input">
+                                    Server
+                                </label>
+
+                                <select class="form-control custom-select">
+									<option hidden selected>Please pick</option>
+									<option> All </option>
+									<option> Server 1 </option>
+									<option> Server 2 </option>
+								</select>
+                            </div>
+                        </div>
+						<div class=" col-xl-4">
+                            <div class=" form-group">
+                                <label class=" form-control-label" for="example4cols2Input">
+                                    Date
+                                </label>
+
+                                <input
+									type="text"
+									class="form-control"
+									bsDaterangepicker
+									[(ngModel)]="bsRangeValue"
+									[bsConfig]="{
+										isAnimated: true,
+										containerClass: 'theme-red'
+									}"
+									name="bsDaterangepicker"
+								/>
+                            </div>
+                        </div>
+						<div class=" col-xl-4">
+                            <div class=" form-group">
+                                <label class=" form-control-label" for="example4cols2Input">
+                                    Pods
+                                </label>
+
+                                <select class="form-control custom-select">
+									<option hidden selected>Please pick</option>
+									<option> All </option>
+									<option> Pods 1 </option>
+									<option> Pods 2 </option>
+								</select>
+                            </div>
+                        </div>
+                  
+                        <div class="col-xl-12 text-right">
+                            <button class="btn btn-default" type="button" (click)="successSwal('searched')"> Search </button>
+                        </div>
+
+						<div class="col-xl-12">
+							<div class="dataTables_wrapper py-4">
+								<div class="row">
+								  <div class="col-sm-12 col-md-6">
+									<div class="dataTables_length" id="datatable_length">
+									  <label>
+										Show
+										<select
+										  name="datatable_length"
+										  aria-controls="datatable"
+										  class="form-control form-control-sm"
+										  (change)="entriesChange($event)"
+										>
+										  <option value="5" [selected]="entries==5">5</option>
+										  <option value="10" [selected]="entries==10">10</option>
+										  <option value="15" [selected]="entries==15">15</option>
+										  <option value="-1" [selected]="entries==-1">All</option>
+										</select>
+										entries
+										</label>
+									</div>
+								  </div>
+								  <div class="col-sm-12 col-md-6">
+									<div id="datatable_filter" class="dataTables_filter">
+									  <label>
+										<input
+										  type="search"
+										  class="form-control form-control-sm"
+										  placeholder="Search records"
+										  aria-controls="datatable"
+										  (keyup)="filterTable($event)"
+										/>
+									  </label>
+									  <button class="btn btn-sm btn-default ml-md-2" type="button" (click)="successSwal('download the file')"> Download </button>
+									</div>
+								  </div>
+								</div>
+							
+								<ngx-datatable
+								  class="bootstrap selection-cell"
+								  [columnMode]="'force'"
+								  [headerHeight]="50"
+								  [footerHeight]="50"
+								  [rowHeight]="'auto'"
+								  [limit]="entries != -1 ? entries:undefined"
+								  [rows]="temp"
+								  
+								>
+							
+									<ngx-datatable-column name="Time" >
+										<ng-template let-row="row" ngx-datatable-cell-template>
+										{{row.date}}
+										</ng-template>
+									</ngx-datatable-column>
+									<ngx-datatable-column name="Server" >
+										<ng-template let-row="row" ngx-datatable-cell-template>
+										{{row.server}}
+										</ng-template>
+									</ngx-datatable-column>
+									<ngx-datatable-column name="Log Level" >
+										<ng-template let-row="row" ngx-datatable-cell-template>
+											<!-- <span
+											  *ngIf="row.level == 'success'"
+											  class="badge badge-pill badge-success"
+											  >Successful</span
+											> -->
+											<span
+											  *ngIf="row.level == 'warn'"
+											  class="badge badge-pill badge-warning"
+											  >Warn</span
+											>
+											<span
+											  *ngIf="row.level == 'error'"
+											  class="badge badge-pill badge-danger"
+											  >Error</span
+											>                 
+										  </ng-template>
+									</ngx-datatable-column>
+									<ngx-datatable-column name="Class name" >
+										<ng-template let-row="row" ngx-datatable-cell-template>
+										{{row.class}}
+										</ng-template>
+									</ngx-datatable-column>
+									<ngx-datatable-column name="Message" >
+										<ng-template let-row="row" ngx-datatable-cell-template>
+										{{row.message}}
+										</ng-template>
+									</ngx-datatable-column>
+									<ngx-datatable-column name="Cluster Name" >
+										<ng-template let-row="row" ngx-datatable-cell-template>
+										{{row.cluster}}
+										</ng-template>
+									</ngx-datatable-column>
+									<ngx-datatable-column name="Project Name" >
+										<ng-template let-row="row" ngx-datatable-cell-template>
+										{{row.project}}
+										</ng-template>
+									</ngx-datatable-column>
+									<ngx-datatable-column name="Project version" >
+										<ng-template let-row="row" ngx-datatable-cell-template>
+										{{row.version}}
+										</ng-template>
+									</ngx-datatable-column>
+								</ngx-datatable>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
