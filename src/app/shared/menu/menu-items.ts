@@ -44,6 +44,24 @@ export const ROUTES: RouteInfo[] = [
     icontype: 'fas fa-server text-blue'
   },
   {
+    path: '/admin/configuration',
+    title: 'Configuration',
+    type: 'sub',
+    icontype: 'fas fa-database text-green',
+    collapse: 'configuration',
+    isCollapsed: true,
+    children: [
+      { path: 'database', title: 'Database', type: 'link' },
+      { path: 'master-database', title: 'Master Database', type: 'link' },
+    ]
+  },
+  {
+    path: '/admin/monetized-api',
+    title: 'Monetized API',
+    type: 'link',
+    icontype: 'fas fa-desktop text-cyan'
+  },
+  {
     path: '/admin/management',
     title: 'Management',
     type: 'sub',

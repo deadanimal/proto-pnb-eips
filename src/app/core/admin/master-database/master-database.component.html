@@ -1,0 +1,250 @@
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <h6 class="h2 text-dark d-inline-block mb-0"> Master Database </h6>
+
+                    <nav aria-label="breadcrumb" class=" d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class=" breadcrumb-item">
+                                <a href="javascript:void(0)"> <i class="fas fa-database text-dark"> </i> </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="javascript:void(0)" class="text-dark"> Configuration </a>
+                            </li>
+                            <li aria-current="page" class="breadcrumb-item active">
+                                Master Database
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <!-- <div class="col-lg-6 col-5 text-right">
+					<a class="btn btn-sm btn-default text-white" (click)="openModal(createUser)">
+						Create
+					</a>
+				</div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label"> Database Name </label>
+                                <input class=" form-control" id="example-text-input" type="text" placeholder="" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="form-control-label"> Status </label>
+                                <select class="form-control custom-select">
+                                    <option hidden selected>Please pick</option>
+                                    <option> Modify </option>
+                                    <option> Delete </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="example-date-input"> From </label>
+                                <input class=" form-control" id="example-date-input" type="date" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="example-date-input"> Date Update </label>
+                                <input class=" form-control" id="example-date-input" type="date" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 text-right">
+                            <button class="btn btn-default" type="button" (click)="successSwal('searched')">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="m-0"> Asset Database </h3>
+                        </div>
+                        <!-- <div class="col-md-6 text-right">
+                            <button class="btn btn-default" type="button" (click)="openModal(viewAction)"> Add Database
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="dataTables_wrapper py-4">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="datatable_length">
+                                    <label>
+                                        Show
+                                        <select name="datatable_length" aria-controls="datatable"
+                                            class="form-control form-control-sm" (change)="entriesChange($event)">
+                                            <option value="5" [selected]="entries==5">5</option>
+                                            <option value="10" [selected]="entries==10">10</option>
+                                            <option value="15" [selected]="entries==15">15</option>
+                                            <option value="-1" [selected]="entries==-1">All</option>
+                                        </select>
+                                        entries
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div id="datatable_filter" class="dataTables_filter">
+                                    <label>
+                                        <input type="search" class="form-control form-control-sm"
+                                            placeholder="Search records" aria-controls="datatable"
+                                            (keyup)="filterTable($event)" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ngx-datatable class="bootstrap selection-cell" [columnMode]="'force'" [headerHeight]="50"
+                            [footerHeight]="50" [rowHeight]="'auto'" [limit]="entries != -1 ? entries:undefined"
+                            [rows]="temp">
+
+                            <ngx-datatable-column name="ID">
+                                <ng-template let-rowIndex="rowIndex" let-row="row" ngx-datatable-cell-template>
+                                    <strong>{{ rowIndex + 1 }}</strong>
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="NAME">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.name}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="FROM">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.from}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Status">
+                                <!-- <ng-template ngx-datatable-header-template>
+								<span> Announcement Status </span>
+								</ng-template> -->
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <span *ngIf="row.status == 'success'"
+                                        class="badge badge-pill badge-success">Validate</span>
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="VERSION">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.version}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="TEL. NO.">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    {{row.noTel}}
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column name="Action">
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <!-- <button class=" btn btn-icon btn-danger btn-sm" type="button" title="Action" (click)="openModal(viewAction)">
+                                        <span class=" btn-inner--icon"> <i class=" fas fa-file-pdf"> </i> </span>
+                                    </button> -->
+                                    <button class=" btn btn-icon btn-default btn-sm" type="button" title="View"
+                                        (click)="openModal(viewAction)">
+                                        <span class=" btn-inner--icon"> <i class=" far fa-eye"> </i> </span>
+                                    </button>
+                                    <button class=" btn btn-icon btn-success btn-sm" type="button" title="Edit"
+                                        (click)="openModal(viewAction)">
+                                        <span class=" btn-inner--icon"> <i class=" fas fa-edit"> </i> </span>
+                                    </button>
+                                </ng-template>
+                            </ngx-datatable-column>
+                        </ngx-datatable>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #viewAction>
+    <div class=" modal-header bg-default ">
+        <h6 class=" modal-title text-white" id="modal-title-default">
+            Database
+        </h6>
+
+        <button aria-label="Close" class=" close" data-dismiss="modal" type="button" (click)="modalRef.hide()">
+            <span class="text-white" aria-hidden="true"> × </span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="form-control-label"> Database Display Name </label>
+                    <input class=" form-control" id="example-text-input" type="text" placeholder="Master_Record" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="form-control-label"> Database Hostname </label>
+                    <input class=" form-control" id="example-text-input" type="text" placeholder="Localhost" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="form-control-label"> SID </label>
+                    <input class=" form-control" id="example-text-input" type="text" placeholder="sql" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="form-control-label"> Port </label>
+                    <input class=" form-control" id="example-text-input" type="text" placeholder="1231" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="form-control-label"> Scheme Name </label>
+                    <input class=" form-control" id="example-text-input" type="text" placeholder="Master_record" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class="form-control-label"> Connection URL </label>
+                    <input class=" form-control" id="example-text-input" type="text"
+                        placeholder="database.sql@localhost.com" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label class=" form-control-label" for="exampleFormControlTextarea1"> Connection URL </label>
+                    <textarea class=" form-control" id="exampleFormControlTextarea3" rows="3"> database.sql@localhost.com </textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" modal-footer">
+        <button class=" btn btn-default text-white" type="button" class="btn btn-success"
+            (click)="successSwal('saved')">
+            Save
+        </button>
+        <button class=" btn btn-link btn-danger ml-auto text-white" data-dismiss="modal" type="button"
+            (click)="modalRef.hide()">
+            Close
+        </button>
+    </div>
+</ng-template>

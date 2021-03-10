@@ -9,6 +9,9 @@ import { ManageUserComponent } from './manage-user/manage-user.component';
 import { RolesComponent } from './roles/roles.component';
 import { DataIntegrationComponent } from './data-integration/data-integration.component';
 import { DataDiscoveryComponent } from './data-discovery/data-discovery.component';
+import { DatabaseComponent } from './database/database.component';
+import { MasterDatabaseComponent } from './master-database/master-database.component';
+import { MonetizedApiComponent } from './monetized-api/monetized-api.component';
 
 export const AdminRoutes: Routes = [
     {
@@ -25,6 +28,23 @@ export const AdminRoutes: Routes = [
             {
                 path: 'server-configuration',
                 component: ServerConfigurationComponent
+            },
+            {
+                path: 'configuration',
+                children: [
+                    {
+                        path: 'database',
+                        component: DatabaseComponent
+                    },
+                    {
+                        path: 'master-database',
+                        component: MasterDatabaseComponent
+                    },
+                ]
+            },
+            {
+                path: 'monetized-api',
+                component: MonetizedApiComponent
             },
             {
                 path: 'management',
