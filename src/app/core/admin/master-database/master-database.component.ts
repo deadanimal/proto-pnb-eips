@@ -29,7 +29,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-4270 2500"
+      noTel: "03-4270 2500",
+      timezone: "12.00:00 (GMT +8)"
     },
     {
       name: "sample_2",      
@@ -37,7 +38,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-7722 2692"
+      noTel: "03-7722 2692",
+      timezone: "12.00:00 (GMT +9)"
     },
     {
       name: "sample_3",      
@@ -45,7 +47,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-4026 7777"
+      noTel: "03-4026 7777",
+      timezone: "12.00:00 (GMT -8)"
     },
     {
       name: "sample_4",      
@@ -53,7 +56,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-5543 1111"
+      noTel: "03-5543 1111",
+      timezone: "12.00:00 (GMT +2)"
     },
     {
       name: "sample_5",      
@@ -61,7 +65,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-8769 2999"
+      noTel: "03-8769 2999",
+      timezone: "12.00:00 (GMT +10)"
     },
     {
       name: "sample_6",      
@@ -69,7 +74,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-4043 7166"
+      noTel: "03-4043 7166",
+      timezone: "12.00:00 (GMT -5)"
     },
     {
       name: "sample_7",      
@@ -77,7 +83,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-3377 7888"
+      noTel: "03-3377 7888",
+      timezone: "12.00:00 (GMT -6)"
     },
     {
       name: "sample_8",      
@@ -85,7 +92,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-4026 7777"
+      noTel: "03-4026 7777",
+      timezone: "12.00:00 (GMT +7)"
     },
     {
       name: "sample_9",      
@@ -93,7 +101,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-5543 1111"
+      noTel: "03-5543 1111",
+      timezone: "12.00:00 (GMT +4)"
     },
     {
       name: "sample_10",      
@@ -101,7 +110,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-8769 2999"
+      noTel: "03-8769 2999",
+      timezone: "12.00:00 (GMT +8)"
     },
     {
       name: "sample_11",      
@@ -109,7 +119,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-4270 2500"
+      noTel: "03-4270 2500",
+      timezone: "12.00:00 (GMT -1)"
     },
     {
       name: "sample_12",      
@@ -117,7 +128,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-7722 2692"
+      noTel: "03-7722 2692",
+      timezone: "12.00:00 (GMT +8)"
     },
     {
       name: "sample_13",      
@@ -125,7 +137,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-4026 7777"
+      noTel: "03-4026 7777",
+      timezone: "12.00:00 (GMT +8)"
     },
     {
       name: "4",      
@@ -133,7 +146,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "Putrajaya",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-5543 1111"
+      noTel: "03-5543 1111",
+      timezone: "12.00:00 (GMT -6)"
     },
     {
       name: "5",      
@@ -141,7 +155,8 @@ export class MasterDatabaseComponent implements OnInit {
       status: "success",
       databaseType: "sql",
       version: "1.0.1",
-      noTel: "03-8769 2999"
+      noTel: "03-8769 2999",
+      timezone: "12.00:00 (GMT +8)"
     },
     
   ];
